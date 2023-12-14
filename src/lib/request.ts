@@ -46,8 +46,8 @@ $axios.interceptors.request.use((config) => {
     if (token) {
       config.headers['Authorization'] = `bearer ${token}`
     }
-    config.headers['x-session-uuid'] =
-      globalThis?.sessionStorage?.getItem(uuidStorageKey) ?? uuid
+   // config.headers['x-session-uuid'] =
+   //   globalThis?.sessionStorage?.getItem(uuidStorageKey) ?? uuid
   }
 
   if (isDev && isServerSide) {
